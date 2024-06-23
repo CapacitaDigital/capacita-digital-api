@@ -18,6 +18,8 @@ namespace UserContext.Models
                     Id = 1, 
                     Username = "admin", 
                     Password = "admin",
+                    Email = "thomaz@email.com",
+                    PhotoURL = "https://www.google.com.br"
                    }
             );
         }

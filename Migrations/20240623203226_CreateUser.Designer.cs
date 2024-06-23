@@ -11,8 +11,8 @@ using UserContext.Models;
 namespace capacita_digital_api.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20240623014926_AddSeedData")]
-    partial class AddSeedData
+    [Migration("20240623203226_CreateUser")]
+    partial class CreateUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,7 +32,15 @@ namespace capacita_digital_api.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhotoURL")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -48,7 +56,9 @@ namespace capacita_digital_api.Migrations
                         new
                         {
                             Id = 1,
+                            Email = "thomaz@email.com",
                             Password = "admin",
+                            PhotoURL = "https://www.google.com.br",
                             Username = "admin"
                         });
                 });

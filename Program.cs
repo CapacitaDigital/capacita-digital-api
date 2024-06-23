@@ -4,6 +4,7 @@ using UserContext.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuração do DbContext para o Entity Framework Core com MySQL
 builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -15,6 +16,17 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+});
+
+// Configuração do CORS para permitir qualquer origem
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
 });
 
 var app = builder.Build();
@@ -31,6 +43,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseRouting();
+
+// Habilita o CORS
+app.UseCors();
 
 app.UseAuthorization();
 

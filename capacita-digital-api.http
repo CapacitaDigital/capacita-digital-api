@@ -1,0 +1,6 @@
+@capacita_digital_api_HostAddress = http://localhost:5245
+
+GET {{capacita_digital_api_HostAddress}}/
+Accept: application/json
+
+###

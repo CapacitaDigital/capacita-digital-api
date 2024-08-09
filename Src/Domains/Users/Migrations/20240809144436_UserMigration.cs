@@ -1,17 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using UserContext.Models;
 
 #nullable disable
 
-namespace capacita_digital_api.Migrations
+namespace capacita_digital_api.Src.Domains.Users.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateUser : Migration
+    public partial class UserMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterDatabase()
+             migrationBuilder.AlterDatabase()
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
@@ -44,7 +48,7 @@ namespace capacita_digital_api.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
+             migrationBuilder.DropTable(
                 name: "Users");
         }
     }

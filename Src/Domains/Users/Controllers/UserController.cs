@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UserContext.Models;
 
-namespace capacita_digital_api.Controllers
+namespace capacita_digital_api.Src.Domains.Users.Controllers
 {
     [Route("api/user")]
     [ApiController]

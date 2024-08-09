@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("capacita-digital-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69ff4a31a743c0548cc9ff2cb90984b2440d08b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb35d13adbcacac08a5f62d4c436a958fda33d58")]
 [assembly: System.Reflection.AssemblyProductAttribute("capacita-digital-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("capacita-digital-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

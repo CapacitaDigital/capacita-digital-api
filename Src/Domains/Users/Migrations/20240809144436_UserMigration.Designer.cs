@@ -8,11 +8,11 @@ using UserContext.Models;
 
 #nullable disable
 
-namespace capacita_digital_api.Migrations
+namespace capacita_digital_api.Src.Domains.Users.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20240623203226_CreateUser")]
-    partial class CreateUser
+    [Migration("20240809144436_UserMigration")]
+    partial class UserMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

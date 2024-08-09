@@ -50,19 +50,10 @@ namespace capacita_digital_api.Src.Domains.Sad.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "thomaz@email.com",
-                            Password = "admin",
-                            PhotoURL = "https://www.google.com.br",
-                            Username = "admin"
-                        });
-                });
+                    b.ToTable("Sad");
 #pragma warning restore 612, 618
+            });
         }
+
     }
 }

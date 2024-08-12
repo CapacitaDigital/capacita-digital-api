@@ -32,21 +32,13 @@ namespace capacita_digital_api.Src.Domains.Sad.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("user_id")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("tempo")
                         .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("PhotoURL")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("atividades");
 
                     b.HasKey("Id");
 

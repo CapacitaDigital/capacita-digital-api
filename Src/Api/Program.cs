@@ -1,6 +1,7 @@
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using UserContext.Models;
+using capacita_digital_api.Src.Domains.Speek.middleware.KeywordProcessingMiddleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,13 +42,16 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
 app.UseRouting();
 
 // Habilita o CORS
 app.UseCors();
 
 app.UseAuthorization();
+
+app.UseWebSockets();
+app.UseMiddleware<KeywordProcessingMiddleware>();
 
 app.MapControllers();
 
